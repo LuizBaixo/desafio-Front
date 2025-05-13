@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "name": "Luiz Gustavo Baixo da Silva",
+      "email": "luizavai@hotmail.com",
+      "cep": "88070650",
+      "address": "Rua Afonso Pena, Canto - Florianópolis/SC",
+      "origin": "Digital",
+      "state": "SC",
+      "id": 1747169118737
+    },
+    {
+      "name": "Luiz Gustavo Baixo da Silva",
+      "email": "luizavai@hotmail.com",
+      "cep": "88070650",
+      "address": "Rua Afonso Pena, Canto - Florianópolis/SC",
+      "origin": "Digital",
+      "state": "SC",
+      "id": 1747169433218
+    },
+    {
+      "name": "Luiz Gustavo Baixo da Silva",
+      "email": "luizavai@hotmail.com",
+      "cep": "88070650",
+      "address": "Rua Afonso Pena, Canto - Florianópolis/SC",
+      "origin": "Físico",
+      "state": "SC",
+      "id": 1747169441071
+    }
+  ]
+}
