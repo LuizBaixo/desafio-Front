@@ -1,0 +1,30 @@
+# Node
+node_modules/
+npm-debug.log*
+.env
+.DS_Store
+
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Editor config
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Optional npm cache directory
+.npm
+
+# Vue
+*.local
+public/assets/
