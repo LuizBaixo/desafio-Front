@@ -1,85 +1,74 @@
-# Desafio Técnico Front-End - AAWZ Partners
+# Desafio Técnico - AAWZ Partners
 
-Este projeto é uma aplicação fullstack desenvolvida para o desafio técnico da AAWZ Partners.
+Este projeto é um sistema de cadastro de usuários com painel administrativo. Permite cadastrar, editar, excluir e listar usuários, além de visualizar estatísticas com gráficos.
 
 ## ✨ Tecnologias Utilizadas
 
-### Front-end
 - [Vue 3](https://vuejs.org/)
 - [Vuetify 3](https://vuetifyjs.com/)
 - [Pinia](https://pinia.vuejs.org/)
 - [Axios](https://axios-http.com/)
 - [ApexCharts](https://apexcharts.com/)
+- [Vite](https://vitejs.dev/)
+- [Vitest](https://vitest.dev/)
+- [ViaCEP API](https://viacep.com.br)
 
-### Back-end
-- [Node.js](https://nodejs.org/)
-- [Express](https://expressjs.com/)
-- [fs-extra](https://www.npmjs.com/package/fs-extra)
-- Persistência em arquivo local `db.json`
+## 📸 Preview da Interface
 
----
+### Formulário e Painéis
+![Print da interface](./frontend/src/assets/tela.png)
 
-## 📂 Estrutura do Projeto
+### Visualização em GIF
+![Preview do sistema](./frontend/src/assets/DesafioAAWZ.gif)
 
-```
-projeto-aawz/
-├── frontend/       # Vue + Vuetify + Charts
-└── backend/        # Node.js + API REST + JSON
-```
+## ⚙️ Funcionalidades
 
----
+- Cadastro de usuários com validação e consulta automática de endereço via CEP.
+- Edição e exclusão de usuários com feedback visual.
+- Busca por nome, e-mail ou estado.
+- Paginação e exibição em tabela.
+- Gráficos dinâmicos com dados por estado e origem.
 
-## 🚀 Como rodar o projeto
+## 🧪 Testes
 
-### 1. Clonar o repositório
+- Testes unitários com [Vitest](https://vitest.dev/)
+- Cobertura básica de regras de validação e estrutura do formulário.
+
+Execute os testes com:
 
 ```bash
-git clone https://github.com/LuizBaixo/desafio-aawz.git
-cd desafio-aawz
+npx vitest run
 ```
 
-### 2. Rodar o back-end
+## ▶️ Executando o Projeto
 
+### Backend
 ```bash
 cd backend
 npm install
 node server.js
 ```
 
-A API ficará disponível em: [http://localhost:3001/users](http://localhost:3001/users)
-
-### 3. Rodar o front-end
-
+### Frontend
 ```bash
-cd ../frontend
+cd frontend
 npm install
 npm run dev
 ```
 
-Acesse o sistema em: [http://localhost:5173](http://localhost:5173)
+O sistema estará disponível em `http://localhost:5173`.
 
----
+## 🗃️ Estrutura
 
-## ✅ Funcionalidades implementadas
-
-- Cadastro de usuário com:
-  - Nome
-  - E-mail
-  - Endereço preenchido automaticamente via CEP
-  - Origem (Digital/Físico)
-  - Estado (dropdown)
-- Máscara de CEP
-- Tabela com paginação
-- Edição de usuários com modal
-- Exclusão de usuários com confirmação
-- Feedback visual com `v-snackbar`
-- Gráficos com ApexCharts:
-  - Distribuição por estado
-  - Distribuição por origem
-
----
-
-## 📧 Contato
-
-Luiz Gustavo Baixo  
-e-mail: luigbaixo@gmail.com
+```
+├── backend
+│   ├── db.json
+│   └── server.js
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── services
+│   │   ├── stores
+│   │   └── tests
+│   └── vite.config.js
+```

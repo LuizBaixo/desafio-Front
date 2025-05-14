@@ -26,15 +26,6 @@
       "origin": "Físico",
       "state": "MG",
       "id": 3
-    },
-    {
-      "name": "Rafael Lima",
-      "email": "rafael.lima@example.com",
-      "cep": "20040-010",
-      "address": "Avenida Presidente Vargas, Centro - Rio de Janeiro/RJ",
-      "origin": "Digital",
-      "state": "RJ",
-      "id": 4
     }
   ]
 }
