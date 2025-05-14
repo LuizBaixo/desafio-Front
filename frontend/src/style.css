@@ -19,3 +19,7 @@ html, body {
 .apexcharts-menu-item:hover {
   background-color: #444 !important;
 }
+
+.v-card {
+  height: 100%;
+}
