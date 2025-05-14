@@ -3,7 +3,7 @@
     {
       "name": "Luiz Gustavo Baixo da Silva",
       "email": "luigbaixo@gmail.com",
-      "cep": "88085250",
+      "cep": "88085-250",
       "address": "Rua Manoel Félix Cardoso, Abraão - Florianópolis/SC",
       "origin": "Digital",
       "state": "SC",
@@ -35,15 +35,6 @@
       "origin": "Digital",
       "state": "RJ",
       "id": 4
-    },
-    {
-      "name": "Juliana Castro",
-      "email": "juliana.castro@example.com",
-      "cep": "60060-000",
-      "address": "Rua Rodrigues Júnior, Centro - Fortaleza/CE",
-      "origin": "Físico",
-      "state": "CE",
-      "id": 5
     }
   ]
 }
