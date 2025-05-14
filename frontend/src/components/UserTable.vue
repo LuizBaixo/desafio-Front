@@ -1,19 +1,24 @@
 <template>
   <v-card class="mt-6">
-    <v-card-title>Usuários Cadastrados</v-card-title>
-
-    <v-container v-if="store.loading" class="text-center py-6">
-      <v-progress-circular color="primary" indeterminate size="40" />
-    </v-container>
+    <v-card-title class="d-flex justify-space-between align-center">
+      Usuários Cadastrados
+      <v-text-field
+        v-model="searchTerm"
+        label="Buscar por nome, e-mail ou estado"
+        clearable
+        hide-details
+        density="compact"
+        style="max-width: 300px;"
+      />
+    </v-card-title>
 
     <v-data-table
-      v-if="!store.loading"
       :headers="headers"
-      :items="users"
-      class="elevation-1"
+      :items="filteredUsers"
       :items-per-page="5"
+      class="elevation-1"
     >
-      <!-- Cabeçalho manual embutido -->
+      <!-- Cabeçalho manual -->
       <template #body.prepend>
         <tr class="text-subtitle-2 font-weight-bold">
           <td>ID</td>
@@ -42,8 +47,8 @@
       </template>
     </v-data-table>
 
-    <v-alert v-else type="info" class="ma-4">
-      Nenhum usuário cadastrado.
+    <v-alert v-if="!filteredUsers.length && !store.loading" type="info" class="ma-4">
+      Nenhum usuário encontrado.
     </v-alert>
   </v-card>
 
@@ -79,11 +84,23 @@
 </template>
 
 <script setup>
-import { ref, computed, reactive } from 'vue'
+import { ref, computed } from 'vue'
 import { useUserStore } from '../stores/userStore'
 
 const store = useUserStore()
 const users = computed(() => store.users)
+
+const searchTerm = ref('')
+
+const filteredUsers = computed(() => {
+  if (!searchTerm.value.trim()) return users.value
+  const term = searchTerm.value.toLowerCase()
+  return users.value.filter(user =>
+    user.name.toLowerCase().includes(term) ||
+    user.email.toLowerCase().includes(term) ||
+    user.state.toLowerCase().includes(term)
+  )
+})
 
 const headers = [
   { text: 'ID', value: 'index' },
@@ -95,7 +112,6 @@ const headers = [
   { text: 'Ações', value: 'actions', sortable: false }
 ]
 
-// Botões de ação
 const editDialog = ref(false)
 const deleteDialog = ref(false)
 const editUser = ref({})

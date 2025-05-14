@@ -1,3 +1,49 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Luiz Gustavo Baixo da Silva",
+      "email": "luigbaixo@gmail.com",
+      "cep": "88085250",
+      "address": "Rua Manoel Félix Cardoso, Abraão - Florianópolis/SC",
+      "origin": "Digital",
+      "state": "SC",
+      "id": 1
+    },
+    {
+      "name": "Lucas Andrade",
+      "email": "lucas.andrade@example.com",
+      "cep": "01001-000",
+      "address": "Praça da Sé, Sé - São Paulo/SP",
+      "origin": "Digital",
+      "state": "SP",
+      "id": 2
+    },
+    {
+      "name": "Fernanda Souza",
+      "email": "fernanda.souza@example.com",
+      "cep": "30130-110",
+      "address": "Alameda Ezequiel Dias, Centro - Belo Horizonte/MG",
+      "origin": "Físico",
+      "state": "MG",
+      "id": 3
+    },
+    {
+      "name": "Rafael Lima",
+      "email": "rafael.lima@example.com",
+      "cep": "20040-010",
+      "address": "Avenida Presidente Vargas, Centro - Rio de Janeiro/RJ",
+      "origin": "Digital",
+      "state": "RJ",
+      "id": 4
+    },
+    {
+      "name": "Juliana Castro",
+      "email": "juliana.castro@example.com",
+      "cep": "60060-000",
+      "address": "Rua Rodrigues Júnior, Centro - Fortaleza/CE",
+      "origin": "Físico",
+      "state": "CE",
+      "id": 5
+    }
+  ]
 }
