@@ -2,6 +2,7 @@
   <v-card class="pa-4" color="surface" elevation="3">
     <v-form v-model="valid" ref="formRef" @submit.prevent="handleSubmit">
       <v-text-field
+        data-testid="input-nome"
         label="Nome"
         v-model="form.name"
         :rules="[required]"
@@ -11,6 +12,7 @@
         required
       />
       <v-text-field
+        data-testid="input-email"
         label="E-mail"
         v-model="form.email"
         :rules="[required, emailRule]"
@@ -21,6 +23,7 @@
         required
       />
       <v-text-field
+        data-testid="input-cep"
         label="CEP"
         v-model="form.cep"
         :rules="[required]"
@@ -50,6 +53,7 @@
         class="mb-3"
       />
       <v-select
+        data-testid="input-origem"
         label="Origem"
         v-model="form.origin"
         :rules="[required]"
