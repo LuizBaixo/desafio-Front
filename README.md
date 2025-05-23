@@ -1,4 +1,4 @@
-# Desafio Técnico - AAWZ Partners
+# Desafio Técnico 
 
 Este projeto é um sistema de cadastro de usuários com painel administrativo. Permite cadastrar, editar, excluir e listar usuários, além de visualizar estatísticas com gráficos.
 
